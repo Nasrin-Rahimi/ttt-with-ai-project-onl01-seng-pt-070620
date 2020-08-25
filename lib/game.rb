@@ -52,14 +52,17 @@ class Game
    end
   end
   
-   def turn
-     index = current_player.move(@board).to_i
-     if valid_move?(index)
-       move(index-1,current_player.token)
-     else
-       turn
-     end
-   end
+  def turn
+    puts "Please enter a number 1-9:"
+    user_input = current_player.move(@board)
+    if @board.valid_move?(user_input)
+      @board.update(user_input, current_player)
+    else puts "Please enter a number 1-9:"
+      @board.display
+      turn
+    end
+    @board.display
+  end
   
   def valid_move?(index)
     if index.between?(1,9) 
