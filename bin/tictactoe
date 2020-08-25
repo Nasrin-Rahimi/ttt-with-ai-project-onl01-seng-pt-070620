@@ -2,4 +2,5 @@
 
 require_relative '../config/environment'
 
- Game.start until gets.strip == "n"
+ game = Game.new
+ game.start until gets.strip == "n"
