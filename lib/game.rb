@@ -17,9 +17,9 @@ class Game
        @board.turn_count.odd? ? @player_2 : @player_1
    end
    
-  def turn_count
-    @board.cells.count{|token| token == "X" || token == "O"}
-  end
+  # def turn_count
+  #   @board.cells.count{|token| token == "X" || token == "O"}
+  # end
   
   def won?
   end
