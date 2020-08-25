@@ -21,9 +21,6 @@ class Game
   #   @board.cells.count{|token| token == "X" || token == "O"}
   # end
   
-  def won?
-  end
-  
   def draw?
     @board.full? && !won? ? true : false
   end
