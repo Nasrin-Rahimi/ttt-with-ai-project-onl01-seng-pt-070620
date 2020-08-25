@@ -43,12 +43,8 @@ class Game
     return false
   end
   
-  def over?
-    if won? || draw?
-      true
-    else  
-     false
-    end
+   def over?
+     (won? || draw?) ? true : false
   end
   
   def winner
