@@ -24,18 +24,8 @@ class Game
   def won?
   end
   
-   def draw?
-    if full? && won? == false
-      true
-    elsif won? != false
-      false
-    elsif !full? && won? == false
-      false
-    end
-  end
-  
-  def full?
-    @board.cells.all?{|token| token == "X" || token == "O"}
+  def draw?
+    @board.full? && !won? ? true : false
   end
   
    def won?
