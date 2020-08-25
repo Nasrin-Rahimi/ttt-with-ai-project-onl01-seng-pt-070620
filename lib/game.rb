@@ -85,7 +85,7 @@ class Game
     end
   end
   
-  def game_start
+  def start
   puts "\nWelcome to Command Line Tic Tac Toe!"
   puts "\nWhat kind of game will you like to play? 
   0 - Computer VS Computer
@@ -111,6 +111,3 @@ class Game
 
 end
 
-game_start until gets.strip == "n"
-  
-end
